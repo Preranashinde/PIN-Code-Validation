@@ -1,11 +1,12 @@
 #!/bin/bash
 
-PINCODE="^[1-9][0-9]{5}$"
+PINCODE="^[1-9]{1}[0-9]{2}\s{0,1}[0-9]{3}$"
 
-read -p "Enter six digit pincode ::" pincode
+read -p "Enter six digit pincode ::" pinCode
 
-if [[ $pincode =~ $PINCODE ]]; then
-	echo Valid Pincode
+if [[ $pinCode =~ $PINCODE ]]; then
+	echo pincode is valid
 else
-	echo Invalid pincode
+	echo pincode is invalid
 fi
+
